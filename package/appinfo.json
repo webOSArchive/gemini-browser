@@ -1,0 +1,14 @@
+{
+    "id": "org.webosarchive.geminibrowser",
+    "version": "1.0.0",
+    "vendor": "webOS Archive",
+    "type": "pdk",
+    "main": "gemini",
+    "title": "Gemini Browser",
+    "icon": "icon.png",
+    "uiRevision": 2,
+    "requiredMemory": 32,
+    "dependencies": [
+        "com.nizovn.openssl"
+    ]
+}

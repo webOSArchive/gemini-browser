@@ -1,0 +1,33 @@
+# Build outputs
+*.o
+/gemini
+package/gemini
+
+# Packaged IPKs
+*.ipk
+
+# Toolchain (download separately - see README.md)
+toolchains/
+
+# Old/temporary files
+*.tar.gz
+openssl-libs/
+
+# Logs
+*.log
+gemini-log.txt
+
+# Editor/IDE files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# macOS
+.DS_Store
+
+# Backup files
+*.bak
+*.orig

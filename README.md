@@ -47,6 +47,7 @@ This project requires the Linaro GCC 4.8 toolchain for ARM cross-compilation.
 The target device (HP TouchPad) must have:
 - webOS 3.0.5 or compatible
 - `com.nizovn.openssl` package installed (provides OpenSSL 1.0.2p for TLS 1.2 support)
+- Visit [http://docs.webosarchive.org](http://docs.webosarchive.org) to find related packages
 
 Install the OpenSSL package via Preware or manually:
 ```bash

@@ -244,6 +244,10 @@ char *url_encode(const char *str) {
 void url_normalize_path(char *path) {
     if (!path || !*path) return;
 
+    /* Check if original path ends with slash (directory indicator) */
+    size_t orig_len = strlen(path);
+    bool had_trailing_slash = (orig_len > 1 && path[orig_len - 1] == '/');
+
     char *src = path;
     char *dst = path;
     char *segments[256];
@@ -293,10 +297,10 @@ void url_normalize_path(char *path) {
             *dst++ = '/';
         }
     }
-    *dst = '\0';
 
-    /* Preserve trailing slash if original had one */
-    if (path[strlen(path) - 1] != '/' && src > path && src[-1] == '\0') {
-        /* Original ended with slash but we removed it - could add back if needed */
+    /* Restore trailing slash if original had one */
+    if (had_trailing_slash && num_segments > 0) {
+        *dst++ = '/';
     }
+    *dst = '\0';
 }
